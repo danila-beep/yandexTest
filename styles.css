@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Yandex Sans Display Thin";
+  src: url(./fonts/YandexSansDisplay-Thin.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Yandex Sans Display Regular";
+  src: url(./fonts/YandexSansDisplay-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Yandex Sans Display Bold";
+  src: url(./fonts/YandexSansDisplay-Bold.woff);
+}
+
+/* Color Palette + Gradient + Box Shadow*/
+:root {
+  --bg-color: white;
+  --bg-gradient-color: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    #f9e5e5 100%
+  );
+  --button-color: #ffde40;
+  --button-box-shadow: 0px 4px 98px 0px rgba(248, 215, 48, 0.6);
+  --top-gradient: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0) 0%,
+    #eababa 100%
+  );
+}
+
+/* Global Styles */
+
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+body {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Yandex Sans Display Regular";
+}
+
+h1 {
+  color: #21201f;
+  font-family: "Yandex Sans Display Bold";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 3.5rem;
+  letter-spacing: -0.07rem;
+}
+
+p {
+  color: #21201f;
+  font-family: "Yandex Sans Display Regular";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.95rem;
+  letter-spacing: -0.03rem;
+}
+
+.button {
+  background: var(--button-color);
+  border: none;
+  border-radius: 2.25rem;
+  padding: 1.5rem 3rem;
+
+  -webkit-box-shadow: var(--button-box-shadow);
+  -moz-box-shadow: var(--button-box-shadow);
+  box-shadow: var(--button-box-shadow);
+
+  color: #21201f;
+  text-align: right;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.375rem;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(105%);
+}
+
+/* Welcome Section */
+
+.welcome-section-wrapper {
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  padding: 0 15%;
+  background: var(--bg-gradient-color);
+  z-index: 1;
+}
+
+.welcome-content {
+  width: 50%;
+}
+
+.welcome-image {
+  position: relative;
+  margin-left: -9rem;
+  margin-top: -4rem;
+  width: 60rem;
+  height: auto;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-image::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: #8241ef;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+.welcome-image img:nth-child(1) {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: rotate(-10deg);
+}
+
+.welcome-image img:nth-child(2) {
+  position: absolute;
+  width: 13rem;
+  height: auto;
+  top: 52%;
+  left: 26%;
+  animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.welcome-pricing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(216, 184, 255, 0.5);
+  border-radius: 30rem;
+}
+
+.welcome-pricing span:nth-child(1) {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: rgba(216, 184, 255, 1);
+  border-radius: 30rem;
+}
+
+.welcome-pricing span:nth-child(2) {
+  padding-right: 0.5rem;
+  color: grey;
+  text-decoration: line-through;
+}
+
+/* Advantages Section */
+.advantages-section-wrapper {
+  padding: 0 15%;
+  margin-bottom: 5rem;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.advantage-item {
+}
+
+/* exclusive section */
+
+.exclusive-section-wrapper {
+  padding: 0 15%;
+  margin-bottom: 5rem;
+}
+
+.exclusive-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.exclusive-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 0.5rem;
+}
+
+.exclusive-column p {
+  width: 100%;
+}
+
+.exclusive-column img {
+  width: 90%;
+  height: auto;
+  transform: rotate(2deg);
+  border-radius: 3rem;
+}
+
+/* Plus Section */
+
+.plus-section-wrapper {
+  padding: 0 15%;
+}
+
+.plus-grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.plus-grid div {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-grid > div:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background: #8241ef;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+.plus-grid > div img:nth-child(1) {
+  width: 120%;
+  transform: rotate(-10deg);
+  position: relative;
+}
+
+.plus-grid > div img:nth-child(2) {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: -20%;
+}
+
+/* Economy Section */
+
+.economy-section-wrapper {
+  padding: 0 15%;
+  margin-bottom: 5rem;
+}
+
+.economy-grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.economy-grid div {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.economy-grid div:nth-child(2) {
+  align-items: start;
+
+}
+
+.economy-grid > div:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background: #8241ef;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+.economy-grid > div img:nth-child(1) {
+  width: 80%;
+  position: relative;
+}
+
+.economy-grid > div img:nth-child(2) {
+  width: 100%;
+  position: absolute;
+  filter: invert(1);
+  transform: scale(80%);
+}
+
+
+
+/* footer */
+
+footer {
+  padding: 0 17%;
+  color: #c5c5c5;
+
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-decoration-line: underline;
+
+  margin-bottom: 3rem;
+}
