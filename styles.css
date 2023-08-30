@@ -60,6 +60,11 @@ html {
   }
 }
 
+@media (max-width: 560px) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -115,7 +120,7 @@ p {
 /* Welcome Section */
 
 .welcome-section-wrapper {
-  height: 100dvh;
+  /* height: 100dvh; */
 
   display: flex;
   flex-direction: row;
@@ -161,11 +166,12 @@ p {
 
 .welcome-image img:nth-child(2) {
   position: absolute;
-  width: 13rem;
+  width: 25%;
   height: auto;
-  top: 52%;
-  left: 26%;
+  top: 53%;
+  left: 27.5%;
   animation: rotate 20s infinite linear;
+  filter: invert(1);
 }
 
 @keyframes rotate {
@@ -239,17 +245,55 @@ p {
   justify-content: center;
   width: fit-content;
   gap: 0.5rem;
+  position: relative;
 }
 
 .exclusive-column p {
   width: 100%;
 }
 
-.exclusive-column img {
+.exclusive-column > img {
   width: 90%;
   height: auto;
   transform: rotate(2deg);
   border-radius: 3rem;
+  position: relative;
+}
+
+.exclusive-column > div img {
+  width: 20%;
+  height: auto;
+  position: absolute;
+}
+
+.direction-logo {
+  top: 15%;
+  left: -6%;
+  transform: rotate(-13deg);
+}
+
+@media (max-width: 1440px) {
+  .direction-logo {
+    top: 20%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .direction-logo {
+    top: 20%;
+  }
+}
+
+.pills-logo {
+  top: -4%;
+  right: -7%;
+  transform: scale(1, -1) rotate(230deg);
+}
+
+.coffe-logo {
+  bottom: -3%;
+  right: 0;
+
 }
 
 /* Plus Section */
@@ -316,7 +360,6 @@ p {
 
 .economy-grid div:nth-child(2) {
   align-items: start;
-
 }
 
 .economy-grid > div:nth-child(1)::before {
@@ -340,8 +383,6 @@ p {
   filter: invert(1);
   transform: scale(80%);
 }
-
-
 
 /* footer */
 
