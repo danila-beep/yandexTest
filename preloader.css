@@ -1,0 +1,59 @@
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: linear-gradient(360deg, rgba(255, 255, 255, 1) 10%, #f9e5e5 100%);
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.preloader-title {
+    width: 50%;
+    height: auto;
+}
+
+.preloader-image {
+    width: 50%;
+    height: auto;
+    position: relative;
+    margin-left: -25%;
+    z-index: -1;
+}
+
+.preloader-image img {
+
+}
+
+.preloader-image img:nth-child(1) {
+    width: 160%;
+    height: auto;
+    transform: rotate(-15deg);
+}
+
+.preloader-image img:nth-child(2) {
+    width: 40%;
+    height: auto;
+    top: 54%;
+    left: 46%;
+    position: absolute;
+    filter: invert(1);
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}

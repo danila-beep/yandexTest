@@ -1,0 +1,52 @@
+.slider-wrapper {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slider-wrapper > img {
+    position: absolute;
+    top: -13%;
+    right: -5%;
+    width: 30%;
+    height: auto;
+    transform: rotate(130deg) scale(1, -1);
+}
+
+.slider {
+  width: 40rem;
+  height: 40rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4rem;
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-control {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.slider-control button {
+    border: none;
+    background: transparent;
+}
+
+
