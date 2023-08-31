@@ -8,18 +8,29 @@
       href="./assets/flaticon.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobileStyles.css" />
+    <link rel="stylesheet" href="carusel.css" />
+    <link rel="stylesheet" href="preloader.css" />
+    <script src="./script.js"></script>
     <title>Клуб Самокатов</title>
   </head>
   <body>
+
+    <div class="preloader">
+        <div class="preloader-title">
+            <img src="./assets/YandexGoIcon.svg" alt="">
+            <h1>Вступайте <br> в клуб <br> Самокатов</h1>
+        </div>
+        <div class="preloader-image">
+            <img src="./assets/WelcomeImage.png" alt="">
+            <img src="./assets/Rectangle.png" alt="">
+        </div>
+    </div>
+
     <section class="welcome-section-wrapper">
       <div class="welcome-content">
-        <img
-          src="./assets/YandexGoIcon.svg"
-          alt=""
-          width="170px"
-          height="50px"
-        />
+        <img src="./assets/YandexGoIcon.svg" alt="" />
         <h1>
           Вступайте <br />
           в клуб <br />
@@ -34,7 +45,7 @@
             <span>3190₽</span>
           </span>
         </p>
-        <button class="button">Стать частью клуба</button>
+        <button class="button" id="become-a-member">Стать частью клуба</button>
       </div>
       <div class="welcome-image">
         <img src="./assets/WelcomeImage.png" alt="" />
@@ -87,20 +98,77 @@
             катались на самокатах с Сергеем Мезенцевым и слушали хор
             Attaque de Panique
           </p>
-          <img src="./assets/ExclusivePhoto1.jpeg" alt="" class="exclusive-photo1"/>
-          <img src="./assets/ExclusivePhoto2.jpeg" alt="" class="exclusive-photo2"/>
+          <img
+            src="./assets/ExclusivePhoto1.jpeg"
+            alt=""
+            class="exclusive-photo1"
+          />
+          <img
+            src="./assets/ExclusivePhoto2.jpeg"
+            alt=""
+            class="exclusive-photo2"
+          />
           <div>
-            <img src="./assets/DirectionLogo.png" alt="" class="direction-logo">
+            <img
+              src="./assets/DirectionLogo.png"
+              alt=""
+              class="direction-logo"
+            />
           </div>
         </div>
         <div class="exclusive-column">
-          <img src="./assets/ExclusivePhoto3.jpeg" alt="" class="exclusive-photo3"/>
-          <img src="./assets/ExclusivePhoto4.jpeg" alt="" class="exclusive-photo4"/>
-            <div>
-                <img src="./assets/PillsLogo.png" alt="" class="pills-logo">
-                <img src="./assets/CoffeLogo.png" alt="" class="coffe-logo">
+          <img
+            src="./assets/ExclusivePhoto3.jpeg"
+            alt=""
+            class="exclusive-photo3"
+          />
+          <img
+            src="./assets/ExclusivePhoto4.jpeg"
+            alt=""
+            class="exclusive-photo4"
+          />
+          <div>
+            <img src="./assets/PillsLogo.png" alt="" class="pills-logo" />
+            <img src="./assets/CoffeLogo.png" alt="" class="coffe-logo" />
+          </div>
+        </div>
+      </div>
+
+      <div class="exclusive-carusel">
+        <p>
+          С абонементом — у вас доступ к специальным мероприятиям, скидки
+          и классный мерч. В 2023 году мы танцевали на Даче Плюс с Антохой MC,
+          катались на самокатах с Сергеем Мезенцевым и слушали хор
+          Attaque de Panique
+        </p>
+
+        <div class="slider-wrapper">
+          <div class="slider">
+            <div class="slide">
+              <img src="./assets/ExclusivePhoto1.jpeg" alt="" />
             </div>
 
+            <div class="slide">
+              <img src="./assets/ExclusivePhoto2.jpeg" alt="" />
+            </div>
+
+            <div class="slide">
+              <img src="./assets/ExclusivePhoto3.jpeg" alt="" />
+            </div>
+
+            <div class="slide">
+              <img src="./assets/ExclusivePhoto4.jpeg" alt="" />
+            </div>
+          </div>
+          <img src="./assets/PillsLogo.png" alt="" />
+          <div class="slider-control">
+            <button class="btn btn-prev">
+              <img src="./assets/ArrowLeft.svg" alt="" />
+            </button>
+            <button class="btn btn-next">
+              <img src="./assets/ArrowRight.svg" alt="" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -132,7 +200,7 @@
             Присоединяйтесь — опция начнёт действовать в начале сезона–2024. Об
             открытии сезона предупредим заранее, чтобы вы были готовы
           </p>
-          <button class="button">Хочу абонемент</button>
+          <button class="button" id="want">Хочу абонемент</button>
         </div>
       </div>
     </section>
